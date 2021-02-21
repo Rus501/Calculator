@@ -1,0 +1,132 @@
+/*CSS Reset*/
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+body {
+  font-size: 32px;
+  background: #2196f3;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #f44336, #2196f3);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f44336, #2196f3);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+main {
+  -webkit-display: flex;
+  -moz-display: flex;
+  -ms-display: flex;
+  -o-display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.calculator {
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+.display {
+  -webkit-display: flex;
+  -moz-display: flex;
+  -ms-display: flex;
+  -o-display: flex;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  align-items: center;
+  margin: 12px 12px 0 12px;
+  height: 60px;
+  padding: 0 10px;
+  background-color: #fff;
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.zero {
+  grid-area: 5/1/6/4;
+}
+
+.equal {
+  grid-area: 4/4/6/5;
+}
+
+.clear {
+  grid-area: 2/4/4/5;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 60px);
+  grid-template-rows: repeat(5, 60px);
+  margin: 0 12px 12px 12px;
+  grid-gap: 1px;
+  background-color: #000;
+  border: 1px solid black;
+}
+.buttons button {
+  background-color: #fff;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+  -webkit-transition: background-color 0.25s;
+  -moz-transition: background-color 0.25s;
+  -ms-transition: background-color 0.25s;
+  -o-transition: background-color 0.25s;
+  transition: background-color 0.25s;
+}
+.buttons button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/*# sourceMappingURL=style.css.map */

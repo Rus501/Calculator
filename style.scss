@@ -1,0 +1,77 @@
+/*CSS Reset*/
+*,*:before,*:after{box-sizing:border-box}html,body,div,span,object,iframe,figure,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,code,em,img,small,strike,strong,sub,sup,tt,b,u,i,ol,ul,li,fieldset,form,label,table,caption,tbody,tfoot,thead,tr,th,td,main,canvas,embed,footer,header,nav,section,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;text-size-adjust:none}footer,header,nav,section,main{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:"";content:none}table{border-collapse:collapse;border-spacing:0}input{-webkit-appearance:none;border-radius:0}
+
+$main-color: #fff;
+$font-size: 32px;
+@mixin display($property, $align) {
+    -webkit-display: $property;
+    -moz-display: $property;
+    -ms-display: $property;
+    -o-display: $property;
+    display: $property;
+    justify-content: $align;
+    align-items: $align;
+}
+@mixin transition($property) {
+    -webkit-transition: $property;
+    -moz-transition: $property;
+    -ms-transition: $property;
+    -o-transition: $property;
+    transition: $property;
+}
+body {
+    font-size: $font-size;
+    background: #2196f3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f44336, #2196f3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f44336, #2196f3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+main { 
+    @include display(flex, center); 
+    min-height: 100vh;
+}
+.calculator {
+    background-color: $main-color;
+    border-radius: 15px;
+}
+.display {
+    @include display(flex, flex-end);
+    align-items: center;
+    margin: 12px 12px 0 12px;
+    height: 60px;
+    padding: 0 10px;
+    background-color: #fff;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+}
+.zero {
+    grid-area: 5 / 1 / 6 / 4;
+}
+.equal {
+    grid-area: 4 / 4 / 6 / 5;
+}
+.clear {
+    grid-area: 2 / 4 / 4 / 5;
+}
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 60px);
+    grid-template-rows: repeat(5, 60px);
+    margin: 0 12px 12px 12px;
+    grid-gap: 1px;
+    background-color: #000;
+    border: 1px solid black;
+        
+    button {
+       background-color: $main-color;
+       border: none;
+       font-size: $font-size;
+       cursor: pointer;
+       @include transition(background-color .25s);
+
+       &:hover {
+           background-color: #000;
+           color: #fff;
+       }
+    }
+}
