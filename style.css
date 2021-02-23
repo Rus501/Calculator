@@ -84,12 +84,16 @@ main {
   align-items: flex-end;
   align-items: center;
   margin: 12px 12px 0 12px;
-  height: 60px;
+  min-height: 60px;
+  max-width: 245px;
   padding: 0 10px;
   background-color: #fff;
   border-left: 1px solid black;
   border-top: 1px solid black;
   border-right: 1px solid black;
+  word-wrap: break-word;
+  word-break: break-all;
+  text-align: right;
 }
 
 .zero {
