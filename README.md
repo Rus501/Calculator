@@ -4,5 +4,3 @@ Live -> https://rus501.github.io/Calculator <br>
 <br>
 Known bugs: <br>
 - After a number has been inserted pressing any operation button multiple times causes numbers to multiply indefinitely
-<br> <br>
-P.S. Used SASS for the first time
