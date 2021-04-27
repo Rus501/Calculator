@@ -36,6 +36,7 @@ function resetDisplay() {
 }
 
 function setOperation(operator) {
+		console.log(operator)
     if (currentOperation !== null) evaluate();
     firstNumber = display.innerText;
     currentOperation = operator;
@@ -99,4 +100,13 @@ function operate(operator, a, b) {
         default:
             return null;
     }
+}
+
+// keydown events
+window.onkeydown = e => {
+	switch(e.code) {
+		case 'Numpad1':
+			addNumber(1)
+			break
+	}
 }
