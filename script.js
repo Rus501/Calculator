@@ -36,7 +36,6 @@ function resetDisplay() {
 }
 
 function setOperation(operator) {
-		console.log(operator)
     if (currentOperation !== null) evaluate();
     firstNumber = display.innerText;
     currentOperation = operator;
@@ -105,8 +104,66 @@ function operate(operator, a, b) {
 // keydown events
 window.onkeydown = e => {
 	switch(e.code) {
+		case 'Numpad0':
+		case 'Digit0':
+			addNumber(0)
+			break
 		case 'Numpad1':
+		case 'Digit1':
 			addNumber(1)
+			break
+		case 'Numpad2':
+		case 'Digit2':
+			addNumber(2)
+			break
+		case 'Numpad3':
+		case 'Digit3':
+			addNumber(3)
+			break
+		case 'Numpad4':
+		case 'Digit4':
+			addNumber(4)
+			break
+		case 'Numpad5':
+		case 'Digit5':
+			addNumber(5)
+			break
+		case 'Numpad6':
+		case 'Digit6':
+			addNumber(6)
+			break
+		case 'Numpad7':
+		case 'Digit7':
+			addNumber(7)
+			break
+		case 'Numpad8':
+		case 'Digit8':
+			addNumber(8)
+			break
+		case 'Numpad9':
+		case 'Digit9':
+			addNumber(9)
+			break
+		case 'Delete':
+			clear()
+			break
+		case 'Slash':
+		case 'NumpadDivide':
+			setOperation('/')
+			break
+		case 'NumpadMultiply':
+			setOperation('*')
+			break
+		case 'NumpadSubtract':
+		case 'Minus':
+			setOperation('-')
+			break
+		case 'NumpadAdd':
+			setOperation('+')
+			break
+		case 'Enter':
+		case 'NumpadEnter':
+			evaluate()
 			break
 	}
 }
